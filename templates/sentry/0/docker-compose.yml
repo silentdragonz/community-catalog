@@ -35,7 +35,7 @@ sentry-cron:
   log_opt: {}
   image: sentry:8.5.0
   volumes_from:
-  - sentry_datavol
+  - sentry-datavol
   links:
   - sentry-postgres:postgres
   - sentry-redis:redis
@@ -69,7 +69,7 @@ sentry:
   log_opt: {}
   image: sentry:8.5.0
   volumes_from:
-  - sentry_datavol
+  - sentry-datavol
   links:
   - sentry-postgres:postgres
   - sentry-redis:redis
@@ -93,7 +93,7 @@ sentry-worker:
   log_opt: {}
   image: sentry:8.5.0
   volumes_from:
-  - sentry_datavol
+  - sentry-datavol
   links:
   - sentry-postgres:postgres
   - sentry-redis:redis
